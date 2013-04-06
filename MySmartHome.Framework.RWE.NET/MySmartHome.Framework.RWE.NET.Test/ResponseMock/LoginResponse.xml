@@ -1,0 +1,9 @@
+﻿<?xml version="1.0"?>
+<BaseResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="LoginResponse" Version="1.50" CorrespondingRequestId="19a3ca04-dcc0-4b7f-85d2-60bf63851509" SessionId="0b2a98a2-9c88-41aa-b8e6-9e738ff3a0b1" CurrentConfigurationVersion="91">
+  <UserRoles>
+    <ShcRole>
+      <Id>f3ebfaea-f293-47c3-835c-0e429fed8fdd</Id>
+      <Name>Owner</Name>
+    </ShcRole>
+  </UserRoles>
+</BaseResponse>

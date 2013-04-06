@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ADF26774-A8C4-4F71-BE4C-181948F4629C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RWE.NET</RootNamespace>
+    <AssemblyName>RWE.NET</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EntityManager.cs" />
+    <Compile Include="Entity\Device\Actuator.cs" />
+    <Compile Include="Entity\Device\SmokeDetectorSensor.cs" />
+    <Compile Include="Entity\Device\WindowDoorSensor.cs" />
+    <Compile Include="Entity\Profiles\EventProfile.cs" />
+    <Compile Include="Entity\Profiles\RuleProfile.cs" />
+    <Compile Include="Entity\Profiles\TimeProfile.cs" />
+    <Compile Include="Entity\Profiles\Profile.cs" />
+    <Compile Include="Entity\OffSettings\DefaultOffSettings.cs" />
+    <Compile Include="Entity\OffSettings\GenericActuatorSettings.cs" />
+    <Compile Include="Entity\OffSettings\RoomTemperatureActuatorSettings.cs" />
+    <Compile Include="Entity\OffSettings\SwitchActuatorSettings.cs" />
+    <Compile Include="Entity\Device\GenericActuator.cs" />
+    <Compile Include="Entity\Device\HumiditySensor.cs" />
+    <Compile Include="Entity\Device\LogicalDevice.cs" />
+    <Compile Include="Entity\Device\PushButtonSensor.cs" />
+    <Compile Include="Entity\Device\RoomHumiditySensor.cs" />
+    <Compile Include="Entity\Device\RoomTemperatureActuator.cs" />
+    <Compile Include="Entity\Device\RoomTemperatureSensor.cs" />
+    <Compile Include="Entity\Device\SwitchActuator.cs" />
+    <Compile Include="Entity\Device\TemperatureSensor.cs" />
+    <Compile Include="Entity\Device\ThermostatActuator.cs" />
+    <Compile Include="Entity\Device\TimerSensor.cs" />
+    <Compile Include="Entity\Device\ValveActuator.cs" />
+    <Compile Include="Entity\Device\VirtualResidentSensor.cs" />
+    <Compile Include="Entity\GenericDeviceState.cs" />
+    <Compile Include="Entity\Location.cs" />
+    <Compile Include="Entity\SmokeDetectorSensorState.cs" />
+    <Compile Include="Entity\WindowDoorSensorState.cs" />
+    <Compile Include="Extensions\LogicalDeviceStateExtensions.cs" />
+    <Compile Include="Interface\IRequestHandler.cs" />
+    <Compile Include="LogicalDeviceStateManager.cs" />
+    <Compile Include="Entity\LogicalDeviceState.cs" />
+    <Compile Include="Entity\RoomHumiditySensorState.cs" />
+    <Compile Include="Entity\RoomTemperatureActuatorState.cs" />
+    <Compile Include="Entity\RoomTemperatureSensorState.cs" />
+    <Compile Include="Entity\SwitchActuatorState.cs" />
+    <Compile Include="Exception\RWEExceptions.cs" />
+    <Compile Include="RequestHandler.cs" />
+    <Compile Include="Request\GetEntitiesRequest.cs" />
+    <Compile Include="Request\NotificationRequest.cs" />
+    <Compile Include="Request\SetActuatorStatesRequest.cs" />
+    <Compile Include="Response\AcknowledgeResponse.cs" />
+    <Compile Include="Response\AuthenticationErrorResponse.cs" />
+    <Compile Include="Request\BaseRequest.cs" />
+    <Compile Include="Request\GetAllLogicalDeviceStatesRequest.cs" />
+    <Compile Include="Request\LoginRequest.cs" />
+    <Compile Include="Request\ProbeShcRequest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Response\BaseResponse.cs" />
+    <Compile Include="Response\ControlResultResponse.cs" />
+    <Compile Include="Response\GetAllLogicalDeviceStatesResponse.cs" />
+    <Compile Include="Entity\LogicalDeviceStatesChangedNotification.cs" />
+    <Compile Include="Response\GetEntitiesResponse.cs" />
+    <Compile Include="Response\LoginResponse.cs" />
+    <Compile Include="Response\NotificationList.cs" />
+    <Compile Include="RWEEvent\Events.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="license.txt" />
+    <Content Include="readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

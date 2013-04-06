@@ -1,0 +1,15 @@
+﻿using RWE.NET.Entity;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Serialization;
+
+namespace RWE.NET.Request
+{
+    public class SetActuatorStatesRequest : BaseRequest
+    {
+        public List<LogicalDeviceState> ActuatorStates { get; set; }
+    }
+}

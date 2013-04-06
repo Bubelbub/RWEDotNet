@@ -1,0 +1,83 @@
+﻿<?xml version="1.0"?>
+<BaseResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="GetAllLogicalDeviceStatesResponse" Version="1.50" CorrespondingRequestId="2d588b9e-f622-4b1d-98c8-45b211fa1cac" Result="Ok">
+  <States>
+    <LogicalDeviceState xsi:type="RoomTemperatureActuatorState">
+      <LogicalDeviceId>da060afd-8e6e-4bfc-9bb5-46b03dc95464</LogicalDeviceId>
+      <PointTemperature>17.0</PointTemperature>
+      <OperationMode>Manu</OperationMode>
+      <WindowReductionActive>false</WindowReductionActive>
+    </LogicalDeviceState>
+    <LogicalDeviceState xsi:type="RoomTemperatureSensorState">
+      <LogicalDeviceId>0fe05d53-5abe-4982-b572-297c7d2ebc2f</LogicalDeviceId>
+      <Temperature>17.8</Temperature>
+    </LogicalDeviceState>
+    <LogicalDeviceState xsi:type="RoomHumiditySensorState">
+      <LogicalDeviceId>96980905-b441-4dfe-8733-6b633f75c56c</LogicalDeviceId>
+      <Humidity>48.5</Humidity>
+    </LogicalDeviceState>
+    <LogicalDeviceState xsi:type="RoomTemperatureActuatorState">
+      <LogicalDeviceId>f80d0848-5367-4f09-ac1c-10a00a6ea9e9</LogicalDeviceId>
+      <PointTemperature>22.5</PointTemperature>
+      <OperationMode>Auto</OperationMode>
+      <WindowReductionActive>false</WindowReductionActive>
+    </LogicalDeviceState>
+    <LogicalDeviceState xsi:type="RoomTemperatureSensorState">
+      <LogicalDeviceId>55094590-a544-4620-9261-21b241c7e74c</LogicalDeviceId>
+      <Temperature>23.3</Temperature>
+    </LogicalDeviceState>
+    <LogicalDeviceState xsi:type="RoomHumiditySensorState">
+      <LogicalDeviceId>80e6481c-81f2-4a20-8e3c-848aaf5bd50a</LogicalDeviceId>
+      <Humidity>38</Humidity>
+    </LogicalDeviceState>
+    <LogicalDeviceState xsi:type="SwitchActuatorState">
+      <LogicalDeviceId>ddcd01ea-8168-41fc-b840-45a1799a54e3</LogicalDeviceId>
+      <IsOn>true</IsOn>
+    </LogicalDeviceState>
+    <LogicalDeviceState xsi:type="SwitchActuatorState">
+      <LogicalDeviceId>9521e89c-21fa-4530-995f-cba2010e3cd5</LogicalDeviceId>
+      <IsOn>false</IsOn>
+    </LogicalDeviceState>
+    <LogicalDeviceState xsi:type="RoomTemperatureActuatorState">
+      <LogicalDeviceId>7efc2f28-ba1c-4220-ac3f-4b9c901dfc26</LogicalDeviceId>
+      <PointTemperature>20.0</PointTemperature>
+      <OperationMode>Auto</OperationMode>
+      <WindowReductionActive>false</WindowReductionActive>
+    </LogicalDeviceState>
+    <LogicalDeviceState xsi:type="RoomTemperatureSensorState">
+      <LogicalDeviceId>56bae2c3-5171-4e5e-8a36-9bd08b7c4aed</LogicalDeviceId>
+      <Temperature>20.1</Temperature>
+    </LogicalDeviceState>
+    <LogicalDeviceState xsi:type="RoomHumiditySensorState">
+      <LogicalDeviceId>6c894dd2-ae8e-461a-8dbb-6ed662ee8132</LogicalDeviceId>
+      <Humidity>45</Humidity>
+    </LogicalDeviceState>
+    <LogicalDeviceState xsi:type="RoomHumiditySensorState">
+      <LogicalDeviceId>4adcc4a7-d117-423f-9539-68c6d7824baf</LogicalDeviceId>
+      <Humidity>46</Humidity>
+    </LogicalDeviceState>
+    <LogicalDeviceState xsi:type="RoomTemperatureSensorState">
+      <LogicalDeviceId>0478e8a6-1e22-4c11-983d-4141b8f23a40</LogicalDeviceId>
+      <Temperature>20.2</Temperature>
+    </LogicalDeviceState>
+    <LogicalDeviceState xsi:type="RoomTemperatureActuatorState">
+      <LogicalDeviceId>3ed7e329-03ef-44aa-b68f-a44974dd2c84</LogicalDeviceId>
+      <PointTemperature>15.0</PointTemperature>
+      <OperationMode>Auto</OperationMode>
+      <WindowReductionActive>false</WindowReductionActive>
+    </LogicalDeviceState>
+    <LogicalDeviceState xsi:type="RoomTemperatureActuatorState">
+      <LogicalDeviceId>667dd9ad-1207-4fe6-bf54-875bb26e65f0</LogicalDeviceId>
+      <PointTemperature>19.5</PointTemperature>
+      <OperationMode>Auto</OperationMode>
+      <WindowReductionActive>false</WindowReductionActive>
+    </LogicalDeviceState>
+    <LogicalDeviceState xsi:type="RoomTemperatureSensorState">
+      <LogicalDeviceId>696b7a03-6776-46f6-9cb0-64595795dc19</LogicalDeviceId>
+      <Temperature>21.2</Temperature>
+    </LogicalDeviceState>
+    <LogicalDeviceState xsi:type="RoomHumiditySensorState">
+      <LogicalDeviceId>418dc204-0c5a-4a16-ab08-af06e9c053e1</LogicalDeviceId>
+      <Humidity>46</Humidity>
+    </LogicalDeviceState>
+  </States>
+</BaseResponse>
