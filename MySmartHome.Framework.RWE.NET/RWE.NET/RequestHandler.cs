@@ -41,6 +41,20 @@ namespace RWE.NET
                 new RemoteCertificateValidationCallback(delegate { return true; });
         }
 
+        public RequestHandler()
+        {
+            ServicePointManager.ServerCertificateValidationCallback =
+                new RemoteCertificateValidationCallback(delegate { return true; });
+        }
+
+        public void SetLoginInformation(string userName, string password, string uri, bool isPasswordHash = false, bool enableDebugMode = false)
+        {
+            this.userName = userName;
+            this.password = isPasswordHash ? password : CreateBase64SHAHash(password);
+            this.uri = uri;
+            this.debugModeEnabled = enableDebugMode;
+        }
+
         /// <summary>
         /// Sendet eine Anfrage an die Zentrale
         /// </summary>

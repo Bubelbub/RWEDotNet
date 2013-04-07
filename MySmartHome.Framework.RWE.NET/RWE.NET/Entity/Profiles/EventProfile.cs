@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RWE.NET.Entity.Profiles
 {
-    class EventProfile
+    public class EventProfile : Profile
     {
     }
 }
