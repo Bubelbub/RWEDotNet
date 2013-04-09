@@ -7,9 +7,16 @@ using System.Threading.Tasks;
 namespace RWE.NET.Exception
 {
     [Serializable]
-    public class AuthenticationErrorException : System.Exception
+    public class AuthenticationInvalidSessionException : System.Exception
     {
-        public AuthenticationErrorException()
+        public AuthenticationInvalidSessionException()
+        { }
+    }
+
+    [Serializable]
+    public class AuthenticationInvalidCredentialsException : System.Exception
+    {
+        public AuthenticationInvalidCredentialsException()
         { }
     }
 }

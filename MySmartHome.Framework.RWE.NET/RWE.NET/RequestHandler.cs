@@ -128,7 +128,7 @@ namespace RWE.NET
                         }
                         return deserialize<TResponse>(reader);
                     }
-                    catch (AuthenticationErrorException)
+                    catch (AuthenticationInvalidSessionException)
                     {
                         this.sessionId = null;
                         return this.RequestResponse<TRequest, TResponse>(request);
@@ -180,10 +180,16 @@ namespace RWE.NET
             var tmpResponse = serializer.Deserialize(response);
             try
             {
+                var errorResponse = tmpResponse as AuthenticationErrorResponse;
                 // Authentifizierung ist fehlgeschlagen
-                if (tmpResponse is AuthenticationErrorResponse)
+                if (errorResponse != null)
                 {
-                    throw new AuthenticationErrorException();
+                    switch (errorResponse.Error)
+                    {
+                        case "InvalidCredentials":
+                            throw new AuthenticationInvalidCredentialsException();
+                    }
+                    throw new AuthenticationInvalidSessionException();
                 }
             }
             finally
