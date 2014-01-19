@@ -7,7 +7,13 @@ using System.Xml.Serialization;
 
 namespace RWE.NET.Request
 {
-    [XmlInclude(typeof(GetEntitiesRequest)), XmlInclude(typeof(NotificationRequest)), XmlInclude(typeof(ProbeShcRequest)), XmlInclude(typeof(LoginRequest)), XmlInclude(typeof(GetAllLogicalDeviceStatesRequest)), XmlInclude(typeof(SetActuatorStatesRequest))]
+    [XmlInclude(typeof(GetEntitiesRequest)), 
+	 XmlInclude(typeof(NotificationRequest)), 
+	 XmlInclude(typeof(ProbeShcRequest)), 
+	 XmlInclude(typeof(LoginRequest)), 
+	 XmlInclude(typeof(GetAllLogicalDeviceStatesRequest)), 
+	 XmlInclude(typeof(SetActuatorStatesRequest))
+	]
     public class BaseRequest
     {
         [XmlAttribute(AttributeName = "Version")]

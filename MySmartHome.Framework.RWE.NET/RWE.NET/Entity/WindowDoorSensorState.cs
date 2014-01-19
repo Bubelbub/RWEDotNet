@@ -1,12 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Xml.Serialization;
 
 namespace RWE.NET.Entity
 {
-    public class WindowDoorSensorState : LogicalDeviceState
-    {
-    }
+  public class WindowDoorSensorState : LogicalDeviceState
+  {
+		bool _isOpen;
+
+		[XmlElement ("IsOpen")]
+		public virtual bool IsOpen
+		{
+			get
+			{
+				return _isOpen;
+			}
+
+			set
+			{
+				_isOpen = value;
+				OnPropertyChanged(value);
+			}
+		}
+
+  }
 }

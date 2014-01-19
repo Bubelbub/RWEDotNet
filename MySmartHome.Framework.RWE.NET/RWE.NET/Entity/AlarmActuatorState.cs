@@ -1,9 +1,10 @@
 ﻿
 namespace RWE.NET.Entity
 {
-  public class SwitchActuatorState : LogicalDeviceState
+  public class AlarmActuatorState : GenericDeviceState
   {
-    bool isOn;
+    private bool isOn;
+
     public virtual bool IsOn
     {
       get

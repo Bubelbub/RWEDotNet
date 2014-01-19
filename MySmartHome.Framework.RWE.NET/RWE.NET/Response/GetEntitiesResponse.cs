@@ -1,20 +1,24 @@
-﻿using RWE.NET.Entity.Device;
-using RWE.NET.Entity;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RWE.NET.Entity.Profiles;
+using System.Xml.Serialization;
 
 namespace RWE.NET.Response
 {
-    public class GetEntitiesResponse : BaseResponse
-    {
-        public List<Location> Locations { get; set; }
-        public Object BaseDevices { get; set; }
-        public List<LogicalDevice> LogicalDevices { get; set; }
-        public List<Profile> Profiles { get; set; }
-        public Object ActuatorContainers { get; set; }
-    }
+  using RWE.NET.Entity;
+  using RWE.NET.Entity.Device;
+  using RWE.NET.Entity.Profiles;
+
+  public class GetEntitiesResponse : BaseResponse
+  {
+    [XmlElement("LCs")]
+    public List<Location> Locations { get; set; }
+    [XmlElement("BDs")]
+    public Object BaseDevices { get; set; }
+    [XmlElement("LDs")]
+    public List<LogicalDevice> LogicalDevices { get; set; }
+    [XmlElement("PFs")]
+    public List<Profile> Profiles { get; set; }
+    [XmlElement("AcCts")]
+    public Object ActuatorContainers { get; set; }
+  }
 }

@@ -1,26 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System.Xml.Serialization;
 namespace RWE.NET.Entity
 {
-    public class RoomTemperatureSensorState : LogicalDeviceState
-    {
-        double temperature;
-        public double Temperature
-        {
-            get
-            {
-                return temperature;
-            }
+  public class RoomTemperatureSensorState : LogicalDeviceState
+  {
+    double temperature;
 
-            set
-            {
-                OnPropertyChanged(value);
-                temperature = value;
-            }
-        }
+    [XmlAttribute (AttributeName="Temperature")]
+    public double Temperature
+    {
+      get
+      {
+        return temperature;
+      }
+
+      set
+      {
+        OnPropertyChanged(value);
+        temperature = value;
+      }
     }
+  }
 }

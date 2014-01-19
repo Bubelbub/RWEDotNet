@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Xml.Serialization;
 
 namespace RWE.NET.Response
 {
-    public class LoginResponse : BaseResponse
-    {
-    }
+  public class LoginResponse : BaseResponse
+  {
+    [XmlAttribute(AttributeName = "ShcOperatingMode")]
+    public virtual string ShcOperatingMode { get; set; }
+
+    [XmlAttribute(AttributeName = "TokenHash")]
+    public virtual string TokenHash { get; set; }
+
+  }
 }

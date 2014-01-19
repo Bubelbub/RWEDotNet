@@ -1,27 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Xml.Serialization;
 
 namespace RWE.NET.Entity
 {
-    public class RoomHumiditySensorState : LogicalDeviceState
+  public class RoomHumiditySensorState : LogicalDeviceState
+  {
+    double humidity;
+
+    [XmlAttribute(AttributeName = "Humidity")]
+    public double Humidity
     {
-        double humidity;
+      get
+      {
+        return humidity;
+      }
 
-        public double Humidity
-        {
-            get
-            {
-                return humidity;
-            }
-
-            set
-            {
-                humidity = value;
-                OnPropertyChanged(value);
-            }
-        }
+      set
+      {
+        humidity = value;
+        OnPropertyChanged(value);
+      }
     }
+  }
 }
